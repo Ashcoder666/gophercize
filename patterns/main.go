@@ -1,7 +1,9 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	tenthPattern(5)
 }
 
 // func firstPattern(n int) {
@@ -123,3 +125,17 @@ func main() {
 // 		fmt.Println()
 // 	}
 // }
+
+func tenthPattern(n int) {
+	for i := 1; i <= 2*n-1; i++ {
+		stars := i
+		if i > (2*n)/2 {
+			stars = 2*n - i // magic happens here
+		}
+		for j := 0; j < stars; j++ {
+			fmt.Print("*")
+
+		}
+		fmt.Println()
+	}
+}

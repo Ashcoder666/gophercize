@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	seventhPattern(4)
+	eighthPattern(4)
 }
 
 // func firstPattern(n int) {
@@ -64,21 +64,38 @@ func main() {
 // }
 
 // xmas tree pattern
-func seventhPattern(n int) {
+// func seventhPattern(n int) {
 
-	num := 1
+// 	num := 1
 
+// 	for i := 1; i <= n; i++ {
+// 		for j := 0; j < n-i; j++ {
+// 			fmt.Print(" ")
+// 		}
+// 		for k := 0; k < num; k++ {
+// 			fmt.Print("*")
+// 		}
+// 		for j := 0; j < n-i; j++ { // optional space after wards
+// 			fmt.Print(" ")
+// 		}
+// 		num += 2
+// 		fmt.Println()
+// 	}
+// }
+
+func eighthPattern(n int) {
+	num := n*2 - 1
 	for i := 1; i <= n; i++ {
-		for j := 0; j < n-i; j++ {
+		for j := 1; j < i; j++ {
 			fmt.Print(" ")
 		}
 		for k := 0; k < num; k++ {
 			fmt.Print("*")
 		}
-		for j := 0; j < n-i; j++ { // optional space after wards
+		for j := 1; j < i; j++ {
 			fmt.Print(" ")
 		}
-		num += 2
+		num -= 2
 		fmt.Println()
 	}
 }

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fifthPattern(5)
+	sixthPattern(5)
 }
 
 // func firstPattern(n int) {
@@ -44,12 +44,21 @@ func main() {
 // 	}
 // }
 
-func fifthPattern(n int) {
-	for j := 0; j < n; j++ {
-		for i := n; i > j; i-- {
-			fmt.Print("*")
+// func fifthPattern(n int) {
+// 	for j := 0; j < n; j++ {
+// 		for i := n; i > j; i-- {
+// 			fmt.Print("*")
+// 		}
+// 		fmt.Println()
+// 	}
+
+// }
+
+func sixthPattern(n int) {
+	for i := 0; i < n; i++ {
+		for j := 1; j <= n-i; j++ {
+			fmt.Print(j)
 		}
 		fmt.Println()
 	}
-
 }

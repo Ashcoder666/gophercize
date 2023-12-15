@@ -1,7 +1,9 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	thirdPattern(5)
 }
 
 // func firstPattern(n int) {
@@ -23,3 +25,12 @@ func main() {
 // 		fmt.Println()
 // 	}
 // }
+
+func thirdPattern(n int) {
+	for i := 0; i < n; i++ {
+		for j := 0; j <= i; j++ {
+			fmt.Print(j + 1)
+		}
+		fmt.Println()
+	}
+}

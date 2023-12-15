@@ -14,3 +14,12 @@ func main() {
 // 		stringg = ""
 // 	}
 // }
+
+// func secondPattern(n int) {
+// 	for i := 0; i < n; i++ {
+// 		for j := 0; j <= i; j++ {
+// 			fmt.Printf("*")
+// 		}
+// 		fmt.Println()
+// 	}
+// }

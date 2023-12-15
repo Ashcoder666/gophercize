@@ -1,9 +1,7 @@
 package main
 
-import "fmt"
-
 func main() {
-	eighthPattern(4)
+
 }
 
 // func firstPattern(n int) {
@@ -83,19 +81,45 @@ func main() {
 // 	}
 // }
 
-func eighthPattern(n int) {
-	num := n*2 - 1
-	for i := 1; i <= n; i++ {
-		for j := 1; j < i; j++ {
-			fmt.Print(" ")
-		}
-		for k := 0; k < num; k++ {
-			fmt.Print("*")
-		}
-		for j := 1; j < i; j++ {
-			fmt.Print(" ")
-		}
-		num -= 2
-		fmt.Println()
-	}
-}
+// func eighthPattern(n int) {
+// 	num := n*2 - 1
+// 	for i := 1; i <= n; i++ {
+// 		for j := 1; j < i; j++ {
+// 			fmt.Print(" ")
+// 		}
+// 		for k := 0; k < num; k++ {
+// 			fmt.Print("*")
+// 		}
+// 		for j := 1; j < i; j++ {
+// 			fmt.Print(" ")
+// 		}
+// 		num -= 2
+// 		fmt.Println()
+// 	}
+// }
+
+// func ninthPattern() {
+// 	num1 := 1
+// 	num2 := 9
+// 	for i := 1; i <= 5; i++ {
+// 		for j := 1; j <= 5-i; j++ {
+// 			fmt.Print(" ")
+// 		}
+// 		for k := 0; k < num1; k++ {
+// 			fmt.Print("*")
+// 		}
+// 		num1 += 2
+// 		fmt.Println()
+
+// 	}
+// 	for a := 1; a <= 5; a++ {
+// 		for b := 1; b < a; b++ {
+// 			fmt.Print(" ")
+// 		}
+// 		for c := 0; c < num2; c++ {
+// 			fmt.Print("*")
+// 		}
+// 		num2 -= 2
+// 		fmt.Println()
+// 	}
+// }

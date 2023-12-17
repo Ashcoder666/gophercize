@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	reverse(542)
+	palindrome(242)
 }
 
 func firstPattern(n int) {
@@ -269,4 +269,24 @@ func reverse(n int) {
 	}
 
 	fmt.Println(num)
+}
+
+func palindrome(n int) {
+	temp := n
+	num := 0
+
+	for n != 0 {
+		digit := n % 10
+
+		num = num*10 + digit
+
+		n = n / 10
+
+	}
+
+	if temp == num {
+		fmt.Println("palindrome")
+	} else {
+		fmt.Println("not palindrome")
+	}
 }

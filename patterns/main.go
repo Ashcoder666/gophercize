@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	palindrome(242)
+	armstrong(154)
 }
 
 func firstPattern(n int) {
@@ -288,5 +288,26 @@ func palindrome(n int) {
 		fmt.Println("palindrome")
 	} else {
 		fmt.Println("not palindrome")
+	}
+}
+
+func armstrong(n int) {
+
+	temp := n
+
+	num := 0
+
+	for temp != 0 {
+		digit := temp % 10
+
+		num = num + (digit * digit * digit)
+
+		temp /= 10
+	}
+
+	if n == num {
+		fmt.Println("armstrong")
+	} else {
+		fmt.Println("not armstrong")
 	}
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	armstrong(154)
+	divioser(79)
 }
 
 func firstPattern(n int) {
@@ -310,4 +310,18 @@ func armstrong(n int) {
 	} else {
 		fmt.Println("not armstrong")
 	}
+}
+
+//Given a number, print all the divisors of the number. A divisor is a number that gives the remainder as zero when divided.
+
+func divioser(n int) {
+	divs := []int{}
+	for i := 1; i <= n; i++ {
+		if n%i == 0 {
+			divs = append(divs, i)
+		}
+
+	}
+
+	fmt.Println(divs)
 }

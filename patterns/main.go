@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
-	eighteenthPattern(5)
+	countDigits(5467865)
 }
 
 func firstPattern(n int) {
@@ -235,4 +238,20 @@ func eighteenthPattern(n int) {
 		}
 		fmt.Println()
 	}
+}
+
+//Given an integer N, write a program to count the number of digits in N.
+
+func countDigits(digit int) int {
+	count := 0
+	//first methos
+	for digit > 0 {
+		digit /= 10
+		count++
+	}
+
+	//second method
+	newDig := strconv.Itoa(digit)
+	fmt.Println(len(newDig))
+	return count
 }

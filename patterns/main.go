@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	countDigits(5467865)
+	reverse(542)
 }
 
 func firstPattern(n int) {
@@ -254,4 +254,19 @@ func countDigits(digit int) int {
 	newDig := strconv.Itoa(digit)
 	fmt.Println(len(newDig))
 	return count
+}
+
+//Given a number N reverse the number and print it.
+
+func reverse(n int) {
+	num := 0
+	for n != 0 {
+		digit := n % 10
+
+		num = num*10 + digit
+
+		n = n / 10
+	}
+
+	fmt.Println(num)
 }

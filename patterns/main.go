@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	seventeenthPattern(4)
+	eighteenthPattern(5)
 }
 
 func firstPattern(n int) {
@@ -221,6 +221,17 @@ func seventeenthPattern(n int) {
 		}
 		for l := i - 1; l > 0; l-- {
 			fmt.Print(alpha[l-1])
+		}
+		fmt.Println()
+	}
+}
+
+func eighteenthPattern(n int) {
+	alpha := []string{"A", "B", "C", "D", "E"}
+
+	for i := 1; i <= n; i++ {
+		for j := n - i; j <= i; j++ {
+			fmt.Print(alpha[n-j-1])
 		}
 		fmt.Println()
 	}

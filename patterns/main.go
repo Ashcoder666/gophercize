@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	divioser(79)
+	sumOfFirstNumbers(6, 0)
 }
 
 func firstPattern(n int) {
@@ -324,4 +324,52 @@ func divioser(n int) {
 	}
 
 	fmt.Println(divs)
+}
+
+// Given a number, check whether it is prime or not.
+
+func primeOrNot(n int) {
+	prime := true
+	for i := 2; i < n; i++ {
+		if n%i == 0 {
+			prime = false
+		}
+	}
+
+	fmt.Println(prime)
+}
+
+// recurssion
+
+func njan(n int) {
+	if n == 0 {
+		return
+	}
+	fmt.Println(n)
+
+	njan(n - 1)
+
+}
+
+func rec(i, n int) {
+	if i > n {
+		return
+	}
+
+	fmt.Println("ashir")
+
+	rec(i+1, n)
+}
+
+func sumOfFirstNumbers(n, sum int) {
+
+	if n == 0 {
+		fmt.Println("sum is ", sum)
+		return
+	}
+
+	sum = sum + n
+
+	sumOfFirstNumbers(n-1, sum)
+
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	sumOfFirstNumbers(6, 0)
+	fmt.Println(sumOfFirstNumbers2(5))
 }
 
 func firstPattern(n int) {
@@ -372,4 +372,23 @@ func sumOfFirstNumbers(n, sum int) {
 
 	sumOfFirstNumbers(n-1, sum)
 
+}
+
+func sumOfFirstNumbers2(n int) int {
+
+	if n == 0 {
+
+		return 0
+	}
+
+	return n + sumOfFirstNumbers2(n-1)
+
+}
+
+func factorial(num int) int {
+	if num == 0 {
+		return 1
+	}
+
+	return num * factorial(num-1)
 }
